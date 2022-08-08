@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row justify-content-center">
+    <form form [formGroup]="logForm" class="col-6 border border-info rounded mt-5 my_form" (ngSubmit)="onSub()">
+        <h4 class="mb-3">Login Page</h4>
+            <div class="form-group mb-4">
+                <input type="text" class="form-control" formControlName="username" placeholder="Username">
+            </div>
+            <div class="form-group mb-4">
+                <input type="text" class="form-control" formControlName="password" placeholder="Password">
+            </div>
+            <button button routerLink="/content" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+</div>

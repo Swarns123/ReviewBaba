@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center">
+    <form form [formGroup]="userForm" class="col-6 border border-info rounded mt-5 my_form" (ngSubmit)="onSubmit()">
+        <h4 class="mb-3">User Sign-Up</h4>
+      <div class="form-group mb-4">
+        <input type="text" class="form-control" formControlName="name" placeholder="Name">
+        <div *ngIf="userForm.controls['name'].hasError('required')" class="alert alert-danger">
+          Please enter a name!!!
+    </div>
+    <div *ngIf="userForm.controls['name'].hasError('minlength')" class="alert alert-danger">
+          Please enter atleast 4 characters!
+    </div>
+    <div *ngIf="userForm.controls['name'].hasError('maxlength')" class="alert alert-danger">
+          Name cannot have more than 10 characters!
+    </div>
+    </div>
+    <div class="form-group mb-4">
+        <input type="text" class="form-control" formControlName="email" placeholder="Email">
+    </div>
+    <div class="form-group mb-4">
+        <input type="text" class="form-control" formControlName="phone" placeholder="Phone">
+    </div>
+    <div formGroupName="user_detail">
+    <div class="form-group mb-4">
+        <input type="text" class="form-control" formControlName="username" placeholder="Username">
+    </div>
+    <div class="form-group mb-4">
+        <input type="text" class="form-control" formControlName="password" placeholder="Password">
+    </div>
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary mr-3">Sign Up</button>
+    <button routerLink="/login" class="btn btn-primary">Log in</button>
+    </form>
+    </div>
+  </div>
+  

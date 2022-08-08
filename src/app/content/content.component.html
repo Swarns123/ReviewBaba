@@ -1,0 +1,16 @@
+<div class="row p-3 mx-0 justify-content-center">
+  <div class="pl-5" style="font-size: larger;">Latest Reviews</div>
+<div class="card col-12 col-md-3 p-3 mx-3 my-2" style="width: 18rem;" *ngFor="let movie of movies">
+    <video controls="" src="https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4"
+      class="bs-card-video"></video>
+    <div class="card-body" style="background-color: black; color: white;">
+      <h5 class="card-title">{{movie.movie_name}}</h5>
+      <p class="card-text">
+        Genre:{{movie.genre}}
+        <br>
+        Language:{{movie.language}}
+      </p>
+      <button class="btn btn-primary" routerLink="/content/{{movie.movie_name}}">Read Review</button>
+    </div>
+  </div>
+  <page-footer></page-footer>

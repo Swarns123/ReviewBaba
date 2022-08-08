@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.top-content{
+    border-bottom: 2px solid white;
+}
+
+.title{
+    font-size: larger;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
+}
+.navbar-brand{
+    font-family: 'Atma', cursive;
+}
+.contain{
+    padding: 2px;
+    background-color: black;
+    height: 90%;
+    width: 60%;
+    color: rgb(173, 24, 24);
+    box-shadow: 2px 2px 8px rgba(0,0,0.8,0.5);
+}
+
+.image{
+    display: inline-block;
+    vertical-align: top;
+}
